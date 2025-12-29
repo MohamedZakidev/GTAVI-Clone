@@ -57,6 +57,9 @@ main {
   .abs-center {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
   }
+  .debug {
+    @apply border-2 border-red-500;
+  }
 }
 
 @layer components {
