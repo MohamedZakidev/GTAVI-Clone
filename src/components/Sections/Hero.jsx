@@ -3,7 +3,7 @@ import ComingSoon from './ComingSoon';
 function Hero() {
   return (
     <section className="hero-section">
-      <div className="size-full">
+      <div className="mask-wrapper size-full">
         {/* jason and lucia bg image */}
         <img src="/images/hero-bg.webp" alt="background" className="scale-out" />
         {/*  */}
@@ -23,7 +23,7 @@ function Hero() {
         </div>
       </div>
 
-      <div>
+      <div className="debug">
         <img
           src="/images/big-hero-text.svg"
           alt="text-logo"
