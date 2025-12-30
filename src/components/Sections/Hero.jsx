@@ -8,20 +8,24 @@ function Hero() {
 
   useGSAP(() => {
     gsap.set('.mask-wrapper', {
-      // maskPosition: initialMaskPos,
-      // maskSize: initialMaskSize,
+      maskPosition: initialMaskPos,
+      maskSize: initialMaskSize,
     });
   });
 
   return (
     <section className="hero-section">
-      <div className="mask-wrapper size-full">
+      <div className="relative size-full">
         {/* jason and lucia bg image */}
-        <img src="/images/hero-bg.webp" alt="background" className="scale-out" />
+        <img
+          src="/images/hero-bg.webp"
+          alt="background"
+          className="scale-out w-full object-cover"
+        />
         {/*  */}
 
         {/* white header behind jason and lucia */}
-        <img src="/images/hero-text.webp" alt="hero-logo" className="title-logo fade-out" />
+        <img src="/images/hero-text.webp" alt="hero-logo" className="fade-out title-logo" />
         {/*  */}
 
         <img
@@ -43,11 +47,11 @@ function Hero() {
         />
       </div>
 
-      <div className="fake-logo-wrapper">
+      {/* <div className="fake-logo-wrapper">
         <img src="/images/big-hero-text.svg" alt="logo" className="overlay-logo" />
-      </div>
+      </div> */}
 
-      <ComingSoon />
+      {/* <ComingSoon /> */}
     </section>
   );
 }

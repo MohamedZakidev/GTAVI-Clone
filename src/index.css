@@ -57,9 +57,6 @@ main {
   .abs-center {
     @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
   }
-  .debug {
-    @apply border-2 border-red-500;
-  }
 }
 
 @layer components {
@@ -79,7 +76,7 @@ main {
       @apply h-full object-cover md:scale-125;
     }
     .title-logo {
-      @apply absolute top-0 h-full object-cover md:scale-125;
+      @apply absolute top-0 left-1/2 h-full w-full -translate-x-1/2 object-cover md:scale-125;
     }
     .trailer-logo {
       @apply absolute -bottom-5 left-1/2 w-48 -translate-x-1/2;
@@ -103,7 +100,7 @@ main {
     @apply absolute inset-0 z-20 h-dvh w-full overflow-hidden opacity-100;
 
     .entrance-logo {
-      @apply 3xl:w-80 3xl:top-48 xs:top-38 absolute left-1/2 w-48 -translate-x-1/2 sm:top-[12.8rem] md:top-34 md:w-60 2xl:top-44 2xl:w-72;
+      @apply 3xl:w-80 xs:top-[9.5rem] 3xl:top-48 absolute left-1/2 w-48 -translate-x-1/2 sm:top-[12.8rem] md:top-[8.5rem] md:w-60 2xl:top-44 2xl:w-72;
     }
 
     .text-wrapper {
@@ -233,11 +230,11 @@ main {
   );
 }
 
-.entrance-message {
+/* .entrance-message {
   mask-image: radial-gradient(circle at 50% 100vh, black 0%, transparent 0%);
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
-}
+} */
 
 .mask-wrapper {
   mask-image: url('/images/big-hero-text.svg');
