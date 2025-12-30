@@ -1,6 +1,18 @@
 import ComingSoon from './ComingSoon';
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { useMaskSettings } from '../../../constants';
 
 function Hero() {
+  const { initialMaskPos, initialMaskSize, maskPos, maskSize } = useMaskSettings();
+
+  useGSAP(() => {
+    gsap.set('.mask-wrapper', {
+      // maskPosition: initialMaskPos,
+      // maskSize: initialMaskSize,
+    });
+  });
+
   return (
     <section className="hero-section">
       <div className="mask-wrapper size-full">
@@ -23,7 +35,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="debug">
+      <div>
         <img
           src="/images/big-hero-text.svg"
           alt="text-logo"

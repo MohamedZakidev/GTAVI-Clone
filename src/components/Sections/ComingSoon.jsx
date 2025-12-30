@@ -1,5 +1,3 @@
-import React from 'react';
-
 function ComingSoon() {
   return (
     <section className="entrance-message">
