@@ -50,7 +50,7 @@ const Hero = () => {
 
   return (
     <section className="hero-section">
-      <div className="mask-wrapper size-full">
+      <div className="mask-wrapper size-full overflow-hidden">
         <img src="/images/hero-bg.webp" alt="background" className="scale-out w-full" />
         <img
           src="/images/hero-text.webp"

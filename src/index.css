@@ -45,6 +45,7 @@ main {
     rgb(18, 18, 24) 43.03%,
     rgb(17, 17, 23) 51.63%
   );
+  overflow: hidden;
 }
 
 @layer utilities {
