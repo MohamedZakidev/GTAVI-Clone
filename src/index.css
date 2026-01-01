@@ -70,7 +70,7 @@ main {
     @apply font-round-bold bg-linear-to-r from-pink-400 via-red-400 to-orange-400 bg-clip-text text-center text-[clamp(3rem,10vw,7rem)] leading-[clamp(2.5rem,8vw,6rem)] font-extrabold! text-transparent uppercase;
   }
   .hero-section {
-    @apply relative h-screen w-dvw overflow-hidden;
+    @apply relative h-dvh w-dvw overflow-hidden;
 
     .scale-out {
       @apply h-full object-cover md:scale-125;
