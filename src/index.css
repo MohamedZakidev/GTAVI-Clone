@@ -70,7 +70,7 @@ main {
     @apply font-round-bold bg-gradient-to-r from-pink-400 via-red-400 to-orange-400 bg-clip-text text-center text-[5rem] leading-[4.5rem] !font-extrabold text-transparent uppercase md:text-[8rem] md:leading-[7rem];
   }
   .hero-section {
-    @apply relative h-dvh w-dvw overflow-hidden;
+    @apply relative h-dvh w-dvw overflow-hidden perspective-near;
 
     .scale-out {
       @apply h-full object-cover md:scale-125;
@@ -87,8 +87,9 @@ main {
     .fake-logo-wrapper {
       @apply xs:top-[9.5rem] 3xl:top-48 absolute left-1/2 z-50 -translate-x-1/2 sm:top-[12.8rem] md:top-[8.5rem] 2xl:top-44;
     }
+
     .overlay-logo {
-      @apply 3xl:w-80 size-full w-60 object-cover opacity-0 md:w-60 2xl:w-72;
+      @apply 3xl:w-80 size-full w-60 object-cover opacity-100 md:w-60 2xl:w-72;
     }
   }
   .first-vd-wrapper {
@@ -230,11 +231,11 @@ main {
   );
 }
 
-/* .entrance-message {
+.entrance-message {
   mask-image: radial-gradient(circle at 50% 100vh, black 0%, transparent 0%);
   mask-repeat: no-repeat;
   mask-size: 100% 100%;
-} */
+}
 
 .mask-wrapper {
   mask-image: url('/images/big-hero-text.svg');
