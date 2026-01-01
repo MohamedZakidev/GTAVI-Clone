@@ -27,16 +27,7 @@ const Hero = () => {
       .to('.scale-out', { scale: 1, ease: 'power1.inOut' })
       .to('.mask-wrapper', { maskSize, maskPosition: maskPos, ease: 'power1.inOut' }, '<')
       .to('.mask-wrapper', { opacity: 0 })
-      .to(
-        '.overlay-logo',
-        {
-          opacity: 1,
-          onComplete: () => {
-            gsap.to('.overlay-logo', { opacity: 0 });
-          },
-        },
-        '<',
-      )
+      // .to('.overlay-logo', { opacity: 1 }, '<')
       .to(
         '.entrance-message',
         {
@@ -46,6 +37,7 @@ const Hero = () => {
         },
         '<',
       );
+
     ScrollTrigger.create({
       trigger: '.hero-section',
       start: 'top top',
@@ -80,9 +72,9 @@ const Hero = () => {
         />
       </div>
 
-      <div className="fake-logo-wrapper">
+      {/* <div className="fake-logo-wrapper">
         <img src="/images/big-hero-text.svg" className="overlay-logo" />
-      </div>
+      </div> */}
 
       <ComingSoon />
     </section>

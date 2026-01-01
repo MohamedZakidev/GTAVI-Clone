@@ -67,10 +67,10 @@ main {
     @apply fixed top-0 left-0 z-[100] flex w-full items-center justify-between p-5 md:p-16;
   }
   .gradient-title {
-    @apply font-round-bold bg-gradient-to-r from-pink-400 via-red-400 to-orange-400 bg-clip-text text-center text-[5rem] leading-[4.5rem] !font-extrabold text-transparent uppercase md:text-[8rem] md:leading-[7rem];
+    @apply font-round-bold bg-linear-to-r from-pink-400 via-red-400 to-orange-400 bg-clip-text text-center text-[clamp(3rem,10vw,7rem)] leading-[clamp(2.5rem,8vw,6rem)] font-extrabold! text-transparent uppercase;
   }
   .hero-section {
-    @apply relative h-dvh w-dvw overflow-hidden perspective-near;
+    @apply relative h-dvh w-dvw;
 
     .scale-out {
       @apply h-full object-cover md:scale-125;
@@ -89,7 +89,7 @@ main {
     }
 
     .overlay-logo {
-      @apply 3xl:w-80 size-full w-60 object-cover opacity-100 md:w-60 2xl:w-72;
+      @apply 3xl:w-80 size-full w-60 object-cover opacity-0 md:w-60 2xl:w-72;
     }
   }
   .first-vd-wrapper {
@@ -98,7 +98,7 @@ main {
     }
   }
   .entrance-message {
-    @apply absolute inset-0 z-20 h-dvh w-full overflow-hidden opacity-100;
+    @apply absolute top-0 z-20 h-dvh w-full overflow-hidden opacity-100;
 
     .entrance-logo {
       @apply 3xl:w-80 xs:top-[9.5rem] 3xl:top-48 absolute left-1/2 w-48 -translate-x-1/2 sm:top-[12.8rem] md:top-[8.5rem] md:w-60 2xl:top-44 2xl:w-72;
@@ -231,7 +231,7 @@ main {
   );
 }
 
-.entrance-message {
+.radial-gradient {
   mask-image: radial-gradient(circle at 50% 100vh, black 0%, transparent 0%);
   mask-repeat: no-repeat;
   mask-size: 100% 100%;

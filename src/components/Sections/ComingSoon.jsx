@@ -1,12 +1,13 @@
 const ComingSoon = () => {
   return (
-    <section className="radial-gradient">
-      <div className="col-center h-full gap-10">
-        <img src="/images/logo.webp" alt="logo" className="entrance-logo" />
+    <section className="entrance-message flex-center radial-gradient">
+      <div className="col-center w-full gap-14">
+        <img src="/images/logo.webp" alt="logo" className="w-[40%] max-w-60 object-contain" />
 
-        <div className="text-wrapper">
+        <div>
           <h3 className="gradient-title">
-            Coming <br /> May 26th <br /> 2026
+            Coming <br />
+            novermber 19 <br /> 2026
           </h3>
         </div>
 
