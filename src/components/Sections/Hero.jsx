@@ -56,7 +56,6 @@ const Hero = () => {
       pin: true,
       scrub: 2.5,
       animation: tl,
-      markers: true,
     });
   });
 
