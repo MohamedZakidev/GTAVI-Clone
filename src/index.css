@@ -64,13 +64,13 @@ main {
     @apply w-dvw overflow-x-hidden;
   }
   nav {
-    @apply fixed top-0 left-0 z-[100] flex w-full items-center justify-between p-5 md:p-16;
+    @apply fixed top-0 left-0 z-100 flex w-full items-center justify-between p-5 md:p-16;
   }
   .gradient-title {
     @apply font-round-bold bg-linear-to-r from-pink-400 via-red-400 to-orange-400 bg-clip-text text-center text-[clamp(3rem,10vw,7rem)] leading-[clamp(2.5rem,8vw,6rem)] font-extrabold! text-transparent uppercase;
   }
   .hero-section {
-    @apply relative h-dvh w-dvw overflow-hidden;
+    @apply relative h-dvh overflow-hidden;
 
     .scale-out {
       @apply h-full object-cover md:scale-125;
@@ -238,7 +238,7 @@ main {
 }
 
 .mask-wrapper {
-  mask-image: url('/images/big-hero-text.svg');
+  mask-image: url('/images/big-hero-text-cropped.svg');
   mask-repeat: no-repeat;
 }
 

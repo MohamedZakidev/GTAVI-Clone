@@ -20,12 +20,31 @@ const Hero = () => {
 
     gsap.set('.entrance-message', { marginTop: '0vh' });
 
+    // gsap.fromTo(
+    //   '.mask-wrapper',
+    //   {
+    //     scale: 1.1,
+    //     opacity: 0,
+    //   },
+    //   {
+    //     scale: 1,
+    //     opacity: 1,
+    //     duration: 1,
+    //     ease: 'power1.out',
+    //   },
+    // );
+
     // Create GSAP timeline with ScrollTrigger
     const tl = gsap
       .timeline()
-      .to('.fade-out', { opacity: 0, ease: 'power1.inOut' })
-      .to('.scale-out', { scale: 1, ease: 'power1.inOut' })
-      .to('.mask-wrapper', { maskSize, maskPosition: maskPos, ease: 'power1.inOut' }, '<')
+      .to('.fade-out', { opacity: 0, ease: 'power1.inOut', duration: 0.25 })
+      .to('.scale-out', { scale: 1, ease: 'power1.inOut' }, 0)
+      .to(
+        '.mask-wrapper',
+        { duration: 0.3, maskSize: maskSize, maskPosition: maskPos, ease: 'power1.inOut' },
+        0,
+      )
+      .to('.bg-fill', { backgroundColor: 'white', duration: 0.1 }, 0.2)
       .to('.mask-wrapper', { opacity: 0 })
       // .to('.overlay-logo', { opacity: 1 }, '<')
       .to(
@@ -50,7 +69,8 @@ const Hero = () => {
 
   return (
     <section className="hero-section">
-      <div className="mask-wrapper size-full">
+      <div className="mask-wrapper relative size-full">
+        <div className="bg-fill absolute inset-0 z-1000 bg-white/0"></div>
         <img src="/images/hero-bg.webp" alt="background" className="scale-out w-full" />
         <img
           src="/images/hero-text.webp"
