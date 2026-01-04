@@ -33,10 +33,10 @@ const Hero = () => {
       .to('.scale-out', { scale: 1, ease: 'power1.inOut' }, 0)
       .to(
         '.mask-wrapper',
-        { duration: 0.3, maskSize: maskSize, maskPosition: maskPos, ease: 'power1.inOut' },
+        { duration: 0.5, maskSize: maskSize, maskPosition: maskPos, ease: 'power1.inOut' },
         0,
       )
-      .to('.bg-fill', { backgroundColor: 'white', duration: 0.1 }, 0.2)
+      .to('.bg-fill', { backgroundColor: 'white', duration: 0.5 }, 0.2)
       .to('.mask-wrapper', { opacity: 0 })
       // .to('.overlay-logo', { opacity: 1 }, '<')
       .to(
