@@ -14,8 +14,20 @@ function FirstVideo() {
     });
 
     const tl = gsap.timeline();
-    tl.to('.hero-section', { opacity: 0, ease: 'power1.inOut' });
-    tl.to('.first-vd-wrapper', { opacity: 1 });
+    tl.to('.hero-section', { delay: 0.5, opacity: 0, ease: 'power1.inOut' });
+    tl.to('.first-vd-wrapper', { opacity: 1, ease: 'power1.out' });
+
+    videoRef.current.onloadedmetadata = () => {
+      tl.to(
+        videoRef.current,
+        {
+          currentTime: videoRef.current.duration,
+          duration: 3,
+          ease: 'power1.inOut',
+        },
+        '-=1',
+      );
+    };
 
     ScrollTrigger.create({
       trigger: '.first-vd-wrapper',
@@ -25,13 +37,19 @@ function FirstVideo() {
       scrub: true,
       pin: true,
       animation: tl,
-      onEnter: () => videoRef.current.play(1),
     });
   });
   return (
-    <section className="first-vd-wrapper h-dvh border-2 border-orange-400">
+    <section className="first-vd-wrapper h-dvh">
       <div className="h-full">
-        <video ref={videoRef} src="/videos/output1.mp4" className="first-vd" />
+        <video
+          ref={videoRef}
+          src="/videos/output1.mp4"
+          className="first-vd"
+          muted
+          preload="auto"
+          playsInline
+        />
       </div>
     </section>
   );
