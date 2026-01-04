@@ -52,7 +52,7 @@ function FirstVideo() {
           className="first-vd"
           muted
           preload="auto"
-          playsInline
+          playsInline="true"
         />
       </div>
     </section>
