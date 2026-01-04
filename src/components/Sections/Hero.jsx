@@ -37,7 +37,7 @@ const Hero = () => {
         0,
       )
       .to('.bg-fill', { backgroundColor: 'white', duration: 0.5 }, 0.2)
-      .to('.mask-wrapper', { opacity: 0 })
+      .to('.mask-wrapper', { autoAlpha: 0 })
       // .to('.overlay-logo', { opacity: 1 }, '<')
       .to(
         '.entrance-message',
