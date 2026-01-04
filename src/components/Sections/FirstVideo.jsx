@@ -13,9 +13,13 @@ function FirstVideo() {
       opacity: 0,
     });
 
-    const tl = gsap.timeline();
-    tl.to('.hero-section', { delay: 1, duration: 1, opacity: 0, ease: 'power1.inOut' });
-    tl.to('.first-vd-wrapper', { opacity: 1, ease: 'power1.out' });
+    const tl = gsap.timeline({
+      defaults: {
+        ease: 'none',
+      },
+    });
+    tl.to('.hero-section', { delay: 1, opacity: 0 });
+    tl.to('.first-vd-wrapper', { opacity: 1 });
 
     videoRef.current.onloadedmetadata = () => {
       tl.to(
