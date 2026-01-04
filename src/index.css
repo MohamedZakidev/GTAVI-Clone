@@ -94,7 +94,7 @@ main {
   }
   .first-vd-wrapper {
     .first-vd {
-      @apply size-full object-cover [object-position:75%_center] md:[object-position:50%_center];
+      @apply size-full object-cover object-[75%_center] md:object-[50%_center];
     }
   }
   .entrance-message {

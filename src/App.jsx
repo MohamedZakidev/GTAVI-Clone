@@ -1,4 +1,6 @@
 import Navbar from './components/Navbar';
+import ComingSoon from './components/Sections/ComingSoon';
+import FirstVideo from './components/Sections/FirstVideo';
 import Hero from './components/Sections/Hero';
 
 function App() {
@@ -6,6 +8,7 @@ function App() {
     <main>
       <Navbar />
       <Hero />
+      <FirstVideo />
     </main>
   );
 }
