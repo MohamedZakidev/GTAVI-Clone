@@ -9,7 +9,7 @@ function FirstVideo() {
   const videoRef = useRef(null);
   useGSAP(() => {
     gsap.set('.first-vd-wrapper', {
-      marginTop: '-190vh',
+      marginTop: '-210vh',
       opacity: 0,
     });
 
@@ -18,7 +18,7 @@ function FirstVideo() {
         ease: 'none',
       },
     });
-    tl.to('.hero-section', { delay: 1, opacity: 0 });
+    tl.to('.hero-section', { delay: 3, opacity: 0 });
     tl.to('.first-vd-wrapper', { opacity: 1 });
 
     videoRef.current.onloadedmetadata = () => {
@@ -27,7 +27,7 @@ function FirstVideo() {
         {
           currentTime: videoRef.current.duration,
           duration: 3,
-          ease: 'power1.inOut',
+          ease: 'none',
         },
         '-=1',
       );
