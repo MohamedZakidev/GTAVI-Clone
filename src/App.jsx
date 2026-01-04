@@ -1,9 +1,10 @@
 import Navbar from './components/Navbar';
+import ComingSoon from './components/Sections/ComingSoon';
 import FirstVideo from './components/Sections/FirstVideo';
 import Hero from './components/Sections/Hero';
+import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollSmoother from 'gsap/ScrollSmoother';
-import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -11,18 +12,22 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 function App() {
   useGSAP(() => {
     ScrollSmoother.create({
-      smooth: 1, // desktop smoothness
+      smooth: 1.2, // desktop smoothness
       smoothTouch: 0.1, // mobile
       effects: true, // data-speed & data-lag support
     });
   }, []);
 
   return (
-    <main id="smooth-content">
-      <Navbar />
-      <Hero />
-      <FirstVideo />
-    </main>
+    <>
+      <header>
+        <Navbar />
+      </header>
+      <main id="smooth-content">
+        <Hero />
+        <FirstVideo />
+      </main>
+    </>
   );
 }
 

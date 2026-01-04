@@ -20,10 +20,10 @@ const Hero = () => {
 
     gsap.set('.entrance-message', { marginTop: '0vh' });
 
-    gsap.from('.mask-wrapper', {
-      scale: 1.1,
-      opacity: 0,
-    });
+    // gsap.from('.mask-wrapper', {
+    //   scale: 1.1,
+    //   opacity: 0,
+    // });
 
     // Create GSAP timeline with ScrollTrigger
     const tl = gsap
@@ -36,7 +36,7 @@ const Hero = () => {
         { duration: 0.5, maskSize: maskSize, maskPosition: maskPos, ease: 'power1.inOut' },
         0,
       )
-      .to('.bg-fill', { backgroundColor: 'white', duration: 0.5 }, 0.2)
+      .to('.bg-fill', { backgroundColor: 'white', duration: 0.4 }, '-=0.28')
       .to('.mask-wrapper', { autoAlpha: 0 })
       // .to('.overlay-logo', { opacity: 1 }, '<')
       .to(
