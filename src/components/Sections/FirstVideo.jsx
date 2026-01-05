@@ -25,7 +25,7 @@ function FirstVideo() {
       tl.to(
         videoRef.current,
         {
-          currentTime: 2,
+          currentTime: videoRef.current.duration,
           duration: 3,
           ease: 'none',
         },
