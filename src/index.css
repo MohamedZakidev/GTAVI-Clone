@@ -118,16 +118,16 @@ main {
     }
   }
   .jason {
-    @apply relative z-10 mt-60 flex flex-col justify-between gap-5 overflow-x-hidden py-40 ps-20 lg:flex-row lg:ps-40 2xl:ps-80;
+    /* @apply relative z-10 mt-60 flex flex-col justify-between gap-5 overflow-x-hidden py-40 ps-20 lg:flex-row lg:ps-40 2xl:ps-80; */
 
     h1 {
       @apply text-yellow font-long mb-12 max-w-[6ch] text-8xl uppercase md:max-w-none md:text-7xl;
     }
     h2 {
-      @apply text-pink mb-7 pe-10 text-4xl md:pe-20 md:text-3xl;
+      @apply text-pink mb-7 w-[90%] text-4xl md:text-3xl;
     }
     p {
-      @apply pe-14 text-lg text-white md:pe-28 md:text-xl;
+      @apply text-lg text-white md:text-xl;
     }
     .jason-1 {
       @apply bg-yellow w-auto -translate-x-5 lg:h-[80vh];
