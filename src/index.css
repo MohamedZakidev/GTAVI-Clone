@@ -28,10 +28,19 @@
 }
 
 body {
-  width: 100dvw;
   overflow-x: hidden;
   font-family: 'Round', sans-serif;
-  background-color: black;
+  background: linear-gradient(
+    223.17deg,
+    rgb(28, 24, 41) 0%,
+    rgb(27, 24, 40) 8.61%,
+    rgb(25, 23, 36) 17.21%,
+    rgb(22, 21, 32) 25.82%,
+    rgb(20, 19, 28) 34.42%,
+    rgb(18, 18, 24) 43.03%,
+    rgb(17, 17, 23) 51.63%
+  );
+  overscroll-behavior-y: none;
 }
 
 main {
@@ -61,7 +70,7 @@ main {
 
 @layer components {
   main {
-    @apply w-dvw overflow-x-hidden;
+    @apply overflow-x-hidden;
   }
   nav {
     @apply fixed top-0 left-0 z-100 flex w-full items-center justify-between p-5 md:p-16;
@@ -70,7 +79,7 @@ main {
     @apply font-round-bold bg-linear-to-r from-pink-400 via-red-400 to-orange-400 bg-clip-text text-center text-[clamp(3rem,10vw,7rem)] leading-[clamp(2.5rem,8vw,6rem)] font-extrabold! text-transparent uppercase;
   }
   .hero-section {
-    @apply relative h-dvh overflow-hidden;
+    @apply relative h-dvh touch-pan-y overflow-hidden overscroll-none;
 
     .scale-out {
       @apply h-full object-cover md:scale-125;
@@ -98,7 +107,7 @@ main {
     }
   }
   .entrance-message {
-    @apply absolute top-0 z-20 h-dvh w-full overflow-hidden opacity-100;
+    @apply absolute top-0 z-20 h-svh w-full overflow-hidden opacity-100;
 
     .entrance-logo {
       @apply 3xl:w-80 xs:top-[9.5rem] 3xl:top-48 absolute left-1/2 w-48 -translate-x-1/2 sm:top-[12.8rem] md:top-[8.5rem] md:w-60 2xl:top-44 2xl:w-72;
@@ -109,16 +118,16 @@ main {
     }
   }
   .jason {
-    @apply relative z-10 mt-60 flex w-dvw flex-col justify-between gap-5 overflow-x-hidden py-40 ps-10 lg:flex-row lg:ps-40 2xl:ps-80;
+    @apply relative z-10 mt-60 flex flex-col justify-between gap-5 overflow-x-hidden py-40 ps-20 lg:flex-row lg:ps-40 2xl:ps-80;
 
     h1 {
-      @apply text-yellow font-long mb-20 text-8xl uppercase;
+      @apply text-yellow font-long mb-12 max-w-[6ch] text-8xl uppercase md:max-w-none md:text-7xl;
     }
     h2 {
-      @apply text-pink mb-7 pe-10 text-3xl md:pe-20 md:text-5xl;
+      @apply text-pink mb-7 pe-10 text-4xl md:pe-20 md:text-3xl;
     }
     p {
-      @apply pe-14 text-lg text-white md:pe-28 md:text-2xl;
+      @apply pe-14 text-lg text-white md:pe-28 md:text-xl;
     }
     .jason-1 {
       @apply bg-yellow w-auto -translate-x-5 lg:h-[80vh];
@@ -206,7 +215,7 @@ main {
     }
   }
   .final {
-    @apply relative h-dvh overflow-hidden;
+    @apply relative h-svh overflow-hidden;
 
     .final-content {
       @apply scale-110;
@@ -214,7 +223,7 @@ main {
   }
 
   .final-message {
-    @apply absolute z-50 h-dvh w-full overflow-hidden opacity-100;
+    @apply absolute z-50 h-svh w-full overflow-hidden opacity-100;
   }
 }
 

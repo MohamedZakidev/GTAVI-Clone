@@ -19,13 +19,13 @@ function FirstVideo() {
       },
     });
     tl.to('.hero-section', { delay: 3, opacity: 0 });
-    tl.to('.first-vd-wrapper', { opacity: 1 });
+    tl.to('.first-vd-wrapper', { opacity: 1, duration: 1 });
 
     videoRef.current.onloadedmetadata = () => {
       tl.to(
         videoRef.current,
         {
-          currentTime: videoRef.current.duration,
+          currentTime: 2,
           duration: 3,
           ease: 'none',
         },

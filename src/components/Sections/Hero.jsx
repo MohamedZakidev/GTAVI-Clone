@@ -7,7 +7,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Hero = () => {
+export default function Hero() {
   const { initialMaskPos, initialMaskSize, maskPos, maskSize } = useMaskSettings();
 
   useGSAP(() => {
@@ -89,6 +89,4 @@ const Hero = () => {
       <ComingSoon />
     </section>
   );
-};
-
-export default Hero;
+}

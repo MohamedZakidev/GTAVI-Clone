@@ -1,11 +1,11 @@
 import Navbar from './components/Navbar';
-import ComingSoon from './components/Sections/ComingSoon';
 import FirstVideo from './components/Sections/FirstVideo';
 import Hero from './components/Sections/Hero';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollSmoother from 'gsap/ScrollSmoother';
 import { useGSAP } from '@gsap/react';
+import JasonGallery from './components/Sections/JasonGallery';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -26,6 +26,7 @@ function App() {
       <main id="smooth-content">
         <Hero />
         <FirstVideo />
+        <JasonGallery />
       </main>
     </>
   );
