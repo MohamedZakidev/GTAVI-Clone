@@ -1,30 +1,28 @@
+import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function JasonGallery() {
-  // useGSAP(() => {
-  //   gsap.set('.jason', { marginTop: '-80vh' });
+  useGSAP(() => {
+    gsap.set('.jason', { marginTop: '-80vh' });
 
-  //   const tl = gsap.timeline();
-  //   tl.to('.first-vd', { opacity: 0, duration: 1, ease: 'power1.inOut' });
+    const tl = gsap.timeline();
+    tl.to('.first-vd', { opacity: 0, duration: 1, ease: 'power1.inOut' });
 
-  //   ScrollTrigger.create({
-  //     trigger: '.jason',
-  //     start: 'top 90%',
-  //     end: '10% center',
-  //     scrub: 2,
-  //     animation: tl,
-  //   });
-  // });
+    ScrollTrigger.create({
+      trigger: '.jason',
+      start: 'top 90%',
+      end: '10% center',
+      scrub: 2,
+      animation: tl,
+    });
+  });
   return (
-    <section
-      className="jason auto-cols-fr grid-cols-1 gap-3 md:grid md:grid-cols-[0.7fr_1fr]"
-      data-speed="1.1"
-    >
+    <section className="jason grid grid-cols-[3rem_0.7fr_1fr_3rem] gap-3" data-speed="1.1">
       {/* first */}
-      <div className="jason-content mb-15 w-full border pl-10">
+      <div className="jason-content col-span-3 col-start-2 row-start-1 mb-15 w-full max-w-sm justify-self-center md:col-span-1 md:col-start-2 md:mb-0 md:max-w-md">
         <h1>Jason Duval</h1>
         <h2 className="font-bold">
           Jason wants an easy life, but things just keep getting harder.
@@ -37,15 +35,15 @@ function JasonGallery() {
       </div>
 
       {/* second */}
-      <div className="md:mt-30">
+      <div className="bg-yellow col-span-4 md:row-start-1 md:h-[70vh] lg:h-[90vh] xl:h-screen">
         <img
           src="/images/jason-1.webp"
-          className="h-full w-full object-cover [object-position:5%_center]"
+          className="size-full object-cover [object-position:5%_center] transition duration-700 ease-in-out hover:scale-[0.98]"
         />
       </div>
 
       {/* third */}
-      <div className="md:-mt-8 md:h-[80vh] lg:-mt-27">
+      <div className="col-span-4 row-start-3">
         <img
           src="/images/jason-2.webp"
           className="h-full w-full object-cover [object-position:80%_center]"
@@ -53,7 +51,7 @@ function JasonGallery() {
       </div>
 
       {/* fourth */}
-      <div className="">
+      <div className="col-span-4 row-start-4">
         <img src="/images/jason-3.webp" alt="" />
       </div>
     </section>

@@ -121,13 +121,13 @@ main {
     /* @apply relative z-10 mt-60 flex flex-col justify-between gap-5 overflow-x-hidden py-40 ps-20 lg:flex-row lg:ps-40 2xl:ps-80; */
 
     h1 {
-      @apply text-yellow font-long mb-12 max-w-[6ch] text-8xl uppercase md:max-w-none md:text-7xl;
+      @apply text-yellow font-long mb-12 text-8xl uppercase md:text-[clamp(3rem,5vw,7rem)];
     }
     h2 {
-      @apply text-pink mb-7 w-[90%] text-4xl md:text-3xl;
+      @apply text-pink mb-7 w-[90%] text-4xl md:text-[clamp(2rem,3vw,6rem)];
     }
     p {
-      @apply text-lg text-white md:text-xl;
+      @apply text-lg text-white md:text-xl md:text-[clamp(1rem,2vw,1.5rem)];
     }
     .jason-1 {
       @apply bg-yellow w-auto -translate-x-5 lg:h-[80vh];
