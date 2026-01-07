@@ -37,7 +37,6 @@ function FirstVideo() {
       trigger: '.first-vd-wrapper',
       start: 'top top',
       end: '+=200%',
-      markers: true,
       scrub: true,
       pin: true,
       animation: tl,

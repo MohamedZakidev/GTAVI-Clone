@@ -6,6 +6,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollSmoother from 'gsap/ScrollSmoother';
 import { useGSAP } from '@gsap/react';
 import JasonGallery from './components/Sections/JasonGallery';
+import SecondVideo from './components/Sections/SecondVideo';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -27,6 +28,7 @@ function App() {
         <Hero />
         <FirstVideo />
         <JasonGallery />
+        <SecondVideo />
       </main>
     </>
   );

@@ -15,7 +15,7 @@ export const useMaskSettings = () => {
 
   if (isTablet) {
     return {
-      initialMaskPos: '45% -1500vh',
+      initialMaskPos: '45% -1600vh',
       initialMaskSize: '3500% 3500%',
       maskPos: '50% 17vh',
       maskSize: '30% 30%',
