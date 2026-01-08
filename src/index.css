@@ -155,39 +155,35 @@ main {
     @apply relative;
   }
   .lucia-life {
-    @apply relative z-10 mt-60 flex w-dvw flex-col justify-between gap-5 overflow-x-hidden py-40 lg:flex-row;
-
+    /* @apply relative z-10 mt-60 flex w-dvw flex-col justify-between gap-5 overflow-x-hidden py-40 lg:flex-row; */
     h1 {
-      @apply text-yellow font-long mb-20 text-8xl uppercase;
+      @apply text-yellow font-long mb-12 text-8xl uppercase md:text-[clamp(3rem,5vw,7rem)];
     }
     h2 {
-      @apply text-pink mb-7 pe-10 text-3xl md:pe-20 md:text-5xl;
+      @apply text-pink mb-7 text-4xl md:text-[clamp(2rem,2.5vw,5rem)];
     }
     p {
-      @apply pe-14 text-lg text-white md:pe-28 md:text-2xl;
-    }
-    p:last-of-type {
-      @apply block md:hidden xl:block;
+      @apply text-lg text-white md:text-[clamp(1rem,1.5vw,3rem)];
     }
     .lucia-1 {
-      @apply bg-yellow w-auto -translate-x-5 lg:h-[80vh];
+      @apply bg-yellow col-span-4 md:col-span-2 md:col-start-1 md:row-start-1 md:mt-20;
 
       img {
         @apply size-full object-cover [object-position:85%_center] transition duration-700 ease-in-out hover:scale-[0.98];
       }
     }
     .lucia-2 {
-      @apply bg-yellow my-20 w-[80%] translate-x-5 md:my-36 lg:h-[60vh] lg:w-[70%] lg:-translate-x-5;
+      @apply bg-yellow col-span-4 justify-self-end md:col-span-1 md:col-start-2 md:w-3/4;
 
       img {
-        @apply size-full object-cover [object-position:50%_center] transition duration-700 ease-in-out hover:scale-x-[0.98] hover:scale-y-[0.98];
+        @apply size-full object-cover [object-position:50%_center] transition duration-700 ease-in-out hover:scale-[0.98];
       }
     }
     .lucia-3 {
-      @apply bg-yellow -translate-x-5 md:w-[60%] lg:h-[90vh];
+      @apply bg-yellow col-span-4 md:col-start-3 md:h-3/4 md:w-3/4;
 
       img {
-        @apply size-full object-cover [object-position:62%_center] transition duration-700 ease-in-out hover:scale-x-[0.98] hover:scale-y-[0.99];
+        @apply size-full object-cover object-[52%_center] transition duration-700 ease-in-out hover:scale-x-[0.98] hover:scale-y-[0.99];
       }
     }
   }

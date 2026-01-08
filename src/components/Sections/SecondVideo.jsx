@@ -29,7 +29,6 @@ function SecondVideo() {
       pin: true,
       animation: tl,
       scrub: true,
-      markers: true,
     });
   });
 
