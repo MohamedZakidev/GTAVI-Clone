@@ -22,7 +22,7 @@ function LuciaGallery() {
 
   return (
     <section
-      className="lucia-life lucia grid grid-cols-[minmax(2rem,0.4fr)_1fr_0.7fr_3rem] gap-3 md:auto-rows-fr md:grid-cols-[3rem_1fr_0.1fr_0.6fr_minmax(2rem,0.3fr)]"
+      className="lucia-life lucia z-10 grid grid-cols-[minmax(2rem,0.4fr)_1fr_0.7fr_3rem] gap-3 md:auto-rows-fr md:grid-cols-[3rem_1fr_0.1fr_0.6fr_minmax(2rem,0.3fr)]"
       data-speed="1.1"
     >
       {/* first */}

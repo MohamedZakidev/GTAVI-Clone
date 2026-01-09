@@ -8,6 +8,7 @@ import { useGSAP } from '@gsap/react';
 import JasonGallery from './components/Sections/JasonGallery';
 import SecondVideo from './components/Sections/SecondVideo';
 import LuciaGallery from './components/Sections/LuciaGallery';
+import PostCard from './components/Sections/PostCard';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -33,6 +34,7 @@ function App() {
 
         <SecondVideo />
         <LuciaGallery />
+        <PostCard />
       </main>
     </>
   );

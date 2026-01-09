@@ -157,7 +157,7 @@ main {
   .lucia-life {
     /* @apply relative z-10 mt-60 flex w-dvw flex-col justify-between gap-5 overflow-x-hidden py-40 lg:flex-row; */
     h1 {
-      @apply text-yellow font-long mb-12 text-8xl uppercase md:text-[clamp(3rem,5vw,7rem)];
+      @apply text-yellow font-long mb-12 text-7xl uppercase md:text-[clamp(3rem,5vw,7rem)];
     }
     h2 {
       @apply text-pink mb-7 text-4xl md:text-[clamp(2rem,2.5vw,5rem)];
@@ -183,19 +183,19 @@ main {
       @apply bg-yellow col-span-4 md:col-start-3 md:h-3/4 md:w-3/4;
 
       img {
-        @apply size-full object-cover object-[52%_center] transition duration-700 ease-in-out hover:scale-x-[0.98] hover:scale-y-[0.99];
+        @apply size-full object-cover object-[52%_center] transition duration-700 ease-in-out hover:scale-[0.98];
       }
     }
   }
   .post-card {
     @apply relative flex items-center justify-center pb-80 shadow-2xl;
 
-    .animated-gradient-bg {
-      @apply absolute left-0 h-[220vh] w-full md:-bottom-5/6 md:h-[200vh] xl:-bottom-1/2;
-    }
+    /* .animated-gradient-bg {
+      @apply left-0 h-[220vh] w-full md:-bottom-5/6 md:h-[200vh] xl:-bottom-1/2;
+    } */
 
     .post-card-wrapper {
-      @apply relative mx-5 flex h-[30vh] w-full items-center justify-center overflow-hidden md:mx-12 md:h-[40vh] xl:mx-56 xl:h-[85vh];
+      @apply relative flex h-[30vh] w-full items-center justify-center overflow-hidden md:h-[40vh] xl:h-[85vh];
 
       video {
         @apply h-full w-full object-cover 2xl:scale-x-105;
