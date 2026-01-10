@@ -63,7 +63,7 @@ export default function JasonCanvas() {
 
     for (let i = 1; i <= FRAME_COUNT; i++) {
       const img = new Image();
-      img.src = `/frames/frame_${String(i).padStart(4, '0')}.jpg`;
+      img.src = `/jason-canvas-frames/frame_${String(i).padStart(4, '0')}.jpg`;
       img.onload = () => {
         loaded++;
         if (loaded === FRAME_COUNT) initScroll();
@@ -76,7 +76,7 @@ export default function JasonCanvas() {
       resize();
       render(); // draw first frame after all images loaded
       gsap.set('.jason-canvas', {
-        marginTop: '-100vh',
+        marginTop: '-120vh',
         autoAlpha: 0,
       });
       gsap.to(frame.current, {
@@ -86,7 +86,7 @@ export default function JasonCanvas() {
         scrollTrigger: {
           trigger: canvas,
           start: 'top top',
-          end: '+=1000',
+          end: '+=200%',
           scrub: 1,
           pin: true,
         },
