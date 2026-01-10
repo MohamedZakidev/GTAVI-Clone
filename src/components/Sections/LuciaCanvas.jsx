@@ -4,11 +4,11 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FRAME_COUNT = 59;
+const FRAME_COUNT = 89;
 
 // const getFrameSrc = (i) => `/frames/frame_${String(i).padStart(4, '0')}.jpg`;
 
-export default function JasonCanvas() {
+export default function LuciaCanvas() {
   const canvasRef = useRef(null);
   const images = useRef([]);
   const frame = useRef({ current: 0 });
@@ -63,7 +63,7 @@ export default function JasonCanvas() {
 
     for (let i = 1; i <= FRAME_COUNT; i++) {
       const img = new Image();
-      img.src = `/jason-canvas-frames/frame_${String(i).padStart(4, '0')}.jpg`;
+      img.src = `/lucia-canvas-frames/frame_${String(i).padStart(4, '0')}.jpg`;
       img.onload = () => {
         loaded++;
         if (loaded === FRAME_COUNT) initScroll();
@@ -75,8 +75,8 @@ export default function JasonCanvas() {
     const initScroll = () => {
       resize();
       render(); // draw first frame after all images loaded
-      gsap.set('.jason-canvas', {
-        marginTop: '-120vh',
+      gsap.set('.lucia-canvas', {
+        marginTop: '-100vh',
         autoAlpha: 0,
       });
       gsap.to(frame.current, {
@@ -93,14 +93,14 @@ export default function JasonCanvas() {
         onUpdate: render,
       });
       const timeline = gsap.timeline();
-      timeline.to('.hero-section', { opacity: 0 });
-      timeline.to('.jason-canvas', {
+      timeline.to('.jason', { opacity: 0 });
+      timeline.to('.lucia-canvas', {
         autoAlpha: 1,
       });
       ScrollTrigger.create({
         trigger: canvas,
         start: 'top top',
-        end: '+=500',
+        end: '30% top',
         scrub: true,
         animation: timeline,
       });
@@ -118,5 +118,5 @@ export default function JasonCanvas() {
     };
   }, []);
 
-  return <canvas ref={canvasRef} className="jason-canvas top-0 left-0 h-dvh w-full" />;
+  return <canvas ref={canvasRef} className="lucia-canvas top-0 left-0 h-dvh w-full" />;
 }

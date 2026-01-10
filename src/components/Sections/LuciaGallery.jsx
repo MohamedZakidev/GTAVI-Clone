@@ -9,13 +9,13 @@ function LuciaGallery() {
     gsap.set('.lucia', { marginTop: '-90vh' });
 
     const tl = gsap.timeline();
-    tl.to('.second-vd', { opacity: 0, duration: 1, ease: 'power1.inOut' });
+    tl.to('.lucia-canvas', { opacity: 0, duration: 1, ease: 'power1.inOut' });
 
     ScrollTrigger.create({
       trigger: '.lucia',
       start: 'top 90%',
-      end: 'bottom top',
-      scrub: 2,
+      end: '10% center',
+      scrub: true,
       animation: tl,
     });
   });

@@ -11,6 +11,7 @@ import LuciaGallery from './components/Sections/LuciaGallery';
 import OutroVideo from './components/Sections/OutroVideo';
 import Outro from './components/Sections/Outro';
 import JasonCanvas from './components/Sections/jasonCanvas';
+import LuciaCanvas from './components/Sections/LuciaCanvas';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -35,7 +36,8 @@ function App() {
         <JasonCanvas />
         <JasonGallery />
 
-        <SecondVideo />
+        {/* <SecondVideo /> */}
+        <LuciaCanvas />
         <LuciaGallery />
         <OutroVideo />
         <Outro />
