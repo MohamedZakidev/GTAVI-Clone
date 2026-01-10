@@ -9,7 +9,7 @@ function Outro() {
     gsap.set('.final-message', { autoAlpha: 0, marginTop: '-140vh' });
 
     const tl = gsap.timeline();
-    tl.to('.final-content', { autoAlpha: 0 });
+    tl.to('.outro-canvas', { opacity: 0 });
     tl.to('.final-message', { autoAlpha: 1 });
 
     ScrollTrigger.create({

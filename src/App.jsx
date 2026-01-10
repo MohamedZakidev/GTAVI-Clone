@@ -1,17 +1,15 @@
 import Navbar from './components/Navbar';
-import FirstVideo from './components/Sections/FirstVideo';
 import Hero from './components/Sections/Hero';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollSmoother from 'gsap/ScrollSmoother';
 import { useGSAP } from '@gsap/react';
 import JasonGallery from './components/Sections/JasonGallery';
-import SecondVideo from './components/Sections/SecondVideo';
 import LuciaGallery from './components/Sections/LuciaGallery';
-import OutroVideo from './components/Sections/OutroVideo';
 import Outro from './components/Sections/Outro';
 import JasonCanvas from './components/Sections/jasonCanvas';
 import LuciaCanvas from './components/Sections/LuciaCanvas';
+import OutroCanvas from './components/Sections/OutroCanvas';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -32,16 +30,14 @@ function App() {
       <main id="smooth-content">
         <Hero />
 
-        {/* <FirstVideo /> */}
         <JasonCanvas />
         <JasonGallery />
 
-        {/* <SecondVideo /> */}
         <LuciaCanvas />
         <LuciaGallery />
-        <OutroVideo />
+
+        <OutroCanvas />
         <Outro />
-        {/* <PostCard /> */}
       </main>
     </>
   );
