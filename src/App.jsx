@@ -10,6 +10,7 @@ import SecondVideo from './components/Sections/SecondVideo';
 import LuciaGallery from './components/Sections/LuciaGallery';
 import OutroVideo from './components/Sections/OutroVideo';
 import Outro from './components/Sections/Outro';
+import JasonCanvas from './components/Sections/jasonCanvas';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -30,7 +31,8 @@ function App() {
       <main id="smooth-content">
         <Hero />
 
-        <FirstVideo />
+        {/* <FirstVideo /> */}
+        <JasonCanvas />
         <JasonGallery />
 
         <SecondVideo />

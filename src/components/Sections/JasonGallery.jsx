@@ -9,7 +9,7 @@ function JasonGallery() {
     gsap.set('.jason', { marginTop: '-80vh' });
 
     const tl = gsap.timeline();
-    tl.to('.first-vd', { opacity: 0, duration: 1, ease: 'power1.inOut' });
+    tl.to('.jason-canvas', { opacity: 0, duration: 1, ease: 'power1.inOut' });
 
     ScrollTrigger.create({
       trigger: '.jason',

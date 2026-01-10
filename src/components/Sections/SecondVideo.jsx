@@ -11,7 +11,7 @@ function SecondVideo() {
   useGSAP(() => {
     gsap.set('.lucia', { marginTop: '-30vh', autoAlpha: 0 });
 
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({ defaults: { ease: 'none' } });
     tl.to('.lucia', { autoAlpha: 1 });
     videoRef.current.onloadedmetadata = () => {
       tl.to(videoRef.current, { currentTime: videoRef.current.duration, duration: 2 }, '');
