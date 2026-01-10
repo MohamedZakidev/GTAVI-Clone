@@ -1,22 +1,20 @@
-import { useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 function PostCard() {
-  const videoRef = useRef(null);
   return (
-    <section className="post-card">
-      <div className="animated-gradient-bg flex h-dvh w-full items-center px-10">
-        <div className="post-card-wrapper group transition-all duration-700 hover:scale-[1.02] hover:rotate-1">
-          <img src="/images/overlay.webp" alt="" />
-          <video
-            src="/videos/postcard-vd.mp4"
-            ref={videoRef}
-            muted
-            playsInline
-            preload="auto"
-            className="h-full w-full"
+    <section className="post-card h-[150vh]">
+      <div className="flex h-full items-center justify-center">
+        <div className="post-card-wrapper group relative w-[95%] max-w-7xl cursor-pointer transition-all duration-500 hover:scale-[1.02] hover:rotate-1">
+          <img
+            src="/images/overlay.webp"
+            alt="overlay image for vice city"
+            className="absolute h-full w-full"
           />
-
-          <button className="group-hover:bg-yellow transition-all duration-700">
+          <video src="/videos/postcard-vd-2.mp4" className="w-full" />
+          <button className="group-hover:bg-yellow absolute -bottom-28 left-1/2 w-2/3 -translate-x-1/2 rounded-full bg-white px-5 py-4 text-lg md:bottom-16 md:w-fit md:px-7">
             Explore Vice City
           </button>
         </div>
