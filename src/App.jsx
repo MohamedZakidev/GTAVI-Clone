@@ -7,7 +7,7 @@ import { useGSAP } from '@gsap/react';
 import JasonGallery from './components/Sections/JasonGallery';
 import LuciaGallery from './components/Sections/LuciaGallery';
 import Outro from './components/Sections/Outro';
-import JasonCanvas from './components/Sections/jasonCanvas';
+import JasonCanvas from './components/Sections/JasonCanvas';
 import LuciaCanvas from './components/Sections/LuciaCanvas';
 import OutroCanvas from './components/Sections/OutroCanvas';
 
