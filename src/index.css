@@ -121,8 +121,6 @@ main {
     }
   }
   .jason {
-    /* @apply relative z-10 mt-60 flex flex-col justify-between gap-5 overflow-x-hidden py-40 ps-20 lg:flex-row lg:ps-40 2xl:ps-80; */
-
     h1 {
       @apply text-yellow font-long mb-12 text-8xl uppercase md:text-[clamp(3rem,5vw,7rem)];
     }
@@ -158,7 +156,6 @@ main {
     @apply relative;
   }
   .lucia-life {
-    /* @apply relative z-10 mt-60 flex w-dvw flex-col justify-between gap-5 overflow-x-hidden py-40 lg:flex-row; */
     h1 {
       @apply text-yellow font-long mb-12 text-7xl uppercase md:text-[clamp(3rem,5vw,7rem)];
     }

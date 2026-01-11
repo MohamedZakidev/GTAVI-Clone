@@ -18,7 +18,6 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 function AppContent() {
   const isLoaded = useIsLoaded();
-  console.log('app', isLoaded);
 
   // Disable scroll while loading
   useEffect(() => {

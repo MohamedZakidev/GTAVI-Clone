@@ -16,14 +16,7 @@ export default function Hero() {
       maskSize: initialMaskSize,
     });
 
-    // gsap.set('.mask-logo', { marginTop: '-100vh', opacity: 0 });
-
     gsap.set('.entrance-message', { marginTop: '0vh' });
-
-    // gsap.from('.mask-wrapper', {
-    //   scale: 1.1,
-    //   opacity: 0,
-    // });
 
     // Create GSAP timeline with ScrollTrigger
     const tl = gsap
@@ -38,7 +31,6 @@ export default function Hero() {
       )
       .to('.bg-fill', { backgroundColor: 'white', duration: 0.4 }, '-=0.28')
       .to('.mask-wrapper', { autoAlpha: 0 })
-      // .to('.overlay-logo', { opacity: 1 }, '<')
       .to(
         '.entrance-message',
         {
@@ -75,17 +67,6 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* <div>
-        <img
-          src="/images/big-hero-text.svg"
-          alt="logo"
-          className="mask-logo size-full object-cover"
-        />
-      </div> */}
-
-      {/* <div className="fake-logo-wrapper">
-        <img src="/images/big-hero-text.svg" className="overlay-logo" />
-      </div> */}
       <ComingSoon />
     </section>
   );
