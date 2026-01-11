@@ -10,10 +10,12 @@ import Outro from './components/Sections/Outro';
 import JasonCanvas from './components/Sections/JasonCanvas';
 import LuciaCanvas from './components/Sections/LuciaCanvas';
 import OutroCanvas from './components/Sections/OutroCanvas';
+import { ImageLoadingProvider } from './context/ImageLoadingContext';
+import LoadingScreen from './components/LoadingScreen';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-function App() {
+function AppContent() {
   useGSAP(() => {
     ScrollSmoother.create({
       smooth: 1, // desktop smoothness
@@ -24,6 +26,7 @@ function App() {
 
   return (
     <>
+      <LoadingScreen />
       <header>
         <Navbar />
       </header>
@@ -40,6 +43,14 @@ function App() {
         <Outro />
       </main>
     </>
+  );
+}
+
+function App() {
+  return (
+    <ImageLoadingProvider>
+      <AppContent />
+    </ImageLoadingProvider>
   );
 }
 
