@@ -4,7 +4,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const FRAME_COUNT = 60;
+const FRAME_COUNT = 59;
 
 // const getFrameSrc = (i) => `/frames/frame_${String(i).padStart(4, '0')}.jpg`;
 
