@@ -1,9 +1,10 @@
-import { useImageLoading } from '../context/ImageLoadingContext';
+import { useIsLoaded, useLoadingProgress } from '../context/ImageLoadingContext';
 import gsap from 'gsap';
 import { useEffect, useRef } from 'react';
 
 export default function LoadingScreen() {
-  const { isLoaded, loadingProgress } = useImageLoading();
+  const { loadingProgress } = useLoadingProgress();
+  const isLoaded = useIsLoaded();
   const containerRef = useRef(null);
   const progressBarRef = useRef(null);
 

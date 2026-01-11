@@ -11,14 +11,14 @@ import Outro from './components/Sections/Outro';
 import JasonCanvas from './components/Sections/JasonCanvas';
 import LuciaCanvas from './components/Sections/LuciaCanvas';
 import OutroCanvas from './components/Sections/OutroCanvas';
-import { ImageLoadingProvider } from './context/ImageLoadingContext';
+import { ImageLoadingProvider, useIsLoaded } from './context/ImageLoadingContext';
 import LoadingScreen from './components/LoadingScreen';
-import { useImageLoading } from './context/ImageLoadingContext';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 function AppContent() {
-  const { isLoaded } = useImageLoading();
+  const isLoaded = useIsLoaded();
+  console.log('app', isLoaded);
 
   // Disable scroll while loading
   useEffect(() => {

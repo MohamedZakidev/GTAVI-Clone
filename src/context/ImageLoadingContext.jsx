@@ -1,6 +1,7 @@
-import { createContext, useContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState, useMemo } from 'react';
 
-const ImageLoadingContext = createContext();
+const IsLoadedContext = createContext();
+const LoadingProgressContext = createContext();
 
 // Image paths to preload - organized by category
 const IMAGES_TO_LOAD = {
@@ -42,7 +43,6 @@ export function ImageLoadingProvider({ children }) {
 
     // Flatten all images
     const allImages = Object.values(IMAGES_TO_LOAD).flat();
-
     allImages.forEach((imageSrc) => {
       const img = new Image();
       img.onload = () => {
@@ -65,19 +65,37 @@ export function ImageLoadingProvider({ children }) {
     });
   }, []);
 
+  // Memoize each context value independently based on its own dependencies
+  const isLoadedValue = useMemo(() => isLoaded, [isLoaded]);
+
+  const progressValue = useMemo(
+    () => ({ loadingProgress, loadedCount, totalCount: TOTAL_IMAGES }),
+    [loadingProgress, loadedCount],
+  );
+
   return (
-    <ImageLoadingContext.Provider
-      value={{ isLoaded, loadingProgress, loadedCount, totalCount: TOTAL_IMAGES }}
-    >
-      {children}
-    </ImageLoadingContext.Provider>
+    <IsLoadedContext.Provider value={isLoadedValue}>
+      <LoadingProgressContext.Provider value={progressValue}>
+        {children}
+      </LoadingProgressContext.Provider>
+    </IsLoadedContext.Provider>
   );
 }
 
-export function useImageLoading() {
-  const context = useContext(ImageLoadingContext);
+// eslint-disable-next-line react-refresh/only-export-components
+export function useIsLoaded() {
+  const context = useContext(IsLoadedContext);
+  if (context === undefined) {
+    throw new Error('useIsLoaded must be used within ImageLoadingProvider');
+  }
+  return context;
+}
+
+// eslint-disable-next-line react-refresh/only-export-components
+export function useLoadingProgress() {
+  const context = useContext(LoadingProgressContext);
   if (!context) {
-    throw new Error('useImageLoading must be used within ImageLoadingProvider');
+    throw new Error('useLoadingProgress must be used within ImageLoadingProvider');
   }
   return context;
 }
