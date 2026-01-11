@@ -13,24 +13,25 @@ import LuciaCanvas from './components/Sections/LuciaCanvas';
 import OutroCanvas from './components/Sections/OutroCanvas';
 import { ImageLoadingProvider } from './context/ImageLoadingContext';
 import LoadingScreen from './components/LoadingScreen';
+import { useImageLoading } from './context/ImageLoadingContext';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 function AppContent() {
-  // Reset scroll to top on page load/refresh
+  const { isLoaded } = useImageLoading();
+
+  // Disable scroll while loading
   useEffect(() => {
-    // Disable browser scroll restoration
-    if ('scrollRestoration' in window.history) {
-      window.history.scrollRestoration = 'manual';
+    if (!isLoaded) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
     }
 
-    // Use requestAnimationFrame to ensure scroll happens after render
-    requestAnimationFrame(() => {
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    });
-  }, []);
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isLoaded]);
 
   useGSAP(() => {
     ScrollSmoother.create({

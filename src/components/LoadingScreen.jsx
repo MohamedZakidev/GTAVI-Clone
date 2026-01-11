@@ -11,8 +11,8 @@ export default function LoadingScreen() {
     if (isLoaded && containerRef.current) {
       // Fade out and hide the loading screen
       gsap.to(containerRef.current, {
-        opacity: 0,
-        duration: 2,
+        autoAlpha: 0,
+        duration: 0.2,
         ease: 'power2.inOut',
         onComplete: () => {
           if (containerRef.current) {
