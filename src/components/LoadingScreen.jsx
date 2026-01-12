@@ -51,22 +51,6 @@ export default function LoadingScreen() {
           style={{ width: `${loadingProgress}%` }}
         />
       </div>
-
-      {/* Loading Dots Animation */}
-      <div className="mt-4 flex gap-2">
-        <div
-          className="h-2 w-2 animate-bounce rounded-full bg-white/60"
-          style={{ animationDelay: '0s' }}
-        />
-        <div
-          className="h-2 w-2 animate-bounce rounded-full bg-white/60"
-          style={{ animationDelay: '0.15s' }}
-        />
-        <div
-          className="h-2 w-2 animate-bounce rounded-full bg-white/60"
-          style={{ animationDelay: '0.3s' }}
-        />
-      </div>
     </div>
   );
 }
