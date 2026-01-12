@@ -19,7 +19,7 @@ export default function Hero() {
     gsap.set('.entrance-message', { marginTop: '0vh' });
 
     gsap.to('.scroll-down-icon', {
-      opacity: 0.7,
+      opacity: 0.8,
       scale: 0.8,
       y: 8,
       duration: 1,
