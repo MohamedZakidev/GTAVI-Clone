@@ -44,10 +44,7 @@ function JasonGallery() {
 
       {/* third */}
       <div className="jason-2">
-        <img
-          src="/images/jason-2.webp"
-          className="object-co ver h-full w-full object-[80%_center]"
-        />
+        <img src="/images/jason-2.webp" />
       </div>
 
       {/* fourth */}
