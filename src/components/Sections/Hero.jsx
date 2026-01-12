@@ -18,6 +18,15 @@ export default function Hero() {
 
     gsap.set('.entrance-message', { marginTop: '0vh' });
 
+    gsap.to('.scroll-down-icon', {
+      opacity: 0.7,
+      scale: 0.8,
+      y: 8,
+      duration: 1,
+      repeat: -1,
+      yoyo: true,
+    });
+
     // Create GSAP timeline with ScrollTrigger
     const tl = gsap
       .timeline()
@@ -61,10 +70,16 @@ export default function Hero() {
           alt="hero-logo"
           className="title-logo fade-out scale-out"
         />
-        <img src="/images/watch-trailer.png" alt="trailer" className="trailer-logo fade-out" />
         <div className="play-img fade-out">
           <img src="/images/play.png" alt="play" className="ml-1 w-7" />
         </div>
+
+        <img src="/images/watch-trailer.png" alt="trailer" className="trailer-logo fade-out" />
+
+        <img
+          src="/images/scroll-down-chevron.png"
+          className="scroll-down-icon absolute bottom-1 left-1/2 w-12 -translate-x-1/2"
+        />
       </div>
 
       <ComingSoon />

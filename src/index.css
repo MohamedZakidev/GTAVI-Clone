@@ -91,7 +91,7 @@ main {
       @apply absolute top-0 left-1/2 h-full w-full -translate-x-1/2 object-cover md:scale-125;
     }
     .trailer-logo {
-      @apply absolute -bottom-5 left-1/2 w-48 -translate-x-1/2;
+      @apply absolute bottom-2 left-1/2 w-48 -translate-x-1/2;
     }
     .play-img {
       @apply absolute top-1/2 left-1/2 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white md:size-28;
