@@ -77,7 +77,7 @@ main {
     @apply overflow-x-hidden;
   }
   nav {
-    @apply fixed top-0 left-0 z-100 flex w-full items-center justify-between bg-white/60 p-5 pb-0 md:p-16 md:pb-0;
+    @apply fixed top-0 left-0 z-100 flex w-full items-center justify-between p-5 pb-0 md:p-16 md:pb-0;
   }
   .gradient-title {
     @apply font-round-bold bg-linear-to-r from-pink-400 via-red-400 to-orange-400 bg-clip-text text-center text-[clamp(3rem,10vw,7rem)] leading-[clamp(2.5rem,8vw,6rem)] font-extrabold! text-transparent uppercase;
@@ -132,24 +132,24 @@ main {
       @apply text-lg text-white md:text-[clamp(1rem,1.5vw,3rem)];
     }
     .jason-1 {
-      @apply bg-yellow relative col-span-4 md:row-start-1 lg:mt-30;
+      @apply bg-yellow col-span-4 md:row-start-1 lg:mt-30;
 
       img {
-        @apply absolute size-full object-cover object-[5%_center] transition duration-700 ease-in-out hover:scale-[0.98];
+        @apply size-full object-cover object-[5%_center] transition duration-700 ease-in-out;
       }
     }
     .jason-2 {
       @apply bg-yellow col-span-4 md:col-span-1 md:col-start-2 lg:-mt-10;
 
       img {
-        @apply size-full object-cover object-[80%_center] transition duration-700 ease-in-out hover:scale-[0.98];
+        @apply size-full object-cover object-[80%_center] transition duration-700 ease-in-out;
       }
     }
     .jason-3 {
       @apply bg-yellow col-span-4 md:h-3/4 md:w-3/4;
 
       img {
-        @apply size-full object-cover object-[42%_center] transition duration-700 ease-in-out hover:scale-[0.97];
+        @apply size-full object-cover object-[42%_center] transition duration-700 ease-in-out;
       }
     }
   }
@@ -170,21 +170,21 @@ main {
       @apply bg-yellow col-span-4 md:col-span-2 md:col-start-1 md:row-start-1 md:mt-20;
 
       img {
-        @apply size-full object-cover [object-position:85%_center] transition duration-700 ease-in-out hover:scale-[0.98];
+        @apply size-full object-cover object-[85%_center] transition duration-700 ease-in-out;
       }
     }
     .lucia-2 {
       @apply bg-yellow col-span-4 justify-self-end md:col-span-1 md:col-start-2 md:w-3/4;
 
       img {
-        @apply size-full object-cover [object-position:50%_center] transition duration-700 ease-in-out hover:scale-[0.98];
+        @apply size-full object-cover object-[50%_center] transition duration-700 ease-in-out;
       }
     }
     .lucia-3 {
       @apply bg-yellow col-span-4 md:col-start-3 md:h-3/4 md:w-3/4;
 
       img {
-        @apply size-full object-cover object-[52%_center] transition duration-700 ease-in-out hover:scale-[0.98];
+        @apply size-full object-cover object-[52%_center] transition duration-700 ease-in-out;
       }
     }
   }

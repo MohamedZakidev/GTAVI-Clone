@@ -38,13 +38,13 @@ function JasonGallery() {
       </div>
 
       {/* second */}
-      <div className="jason-1">
-        <img src="/images/jason-1.webp" />
+      <div className="jason-1 group">
+        <img src="/images/jason-1.webp" className="group-hover:scale-98" />
       </div>
 
       {/* third */}
-      <div className="jason-2">
-        <img src="/images/jason-2.webp" />
+      <div className="jason-2 group">
+        <img src="/images/jason-2.webp" className="group-hover:scale-95" />
       </div>
 
       {/* fourth */}

@@ -37,17 +37,17 @@ function LuciaGallery() {
       </div>
 
       {/* second */}
-      <div className="lucia-1 img-box">
-        <img src="/images/lucia-1.webp" />
+      <div className="lucia-1 group">
+        <img src="/images/lucia-1.webp" className="group-hover:scale-98" />
       </div>
 
       {/* third */}
-      <div className="lucia-2 img-box">
+      <div className="lucia-2">
         <img src="/images/lucia-3.webp" />
       </div>
 
       {/* fourth */}
-      <div className="lucia-3 img-box">
+      <div className="lucia-3">
         <img src="/images/lucia-2.webp" alt="Jason in a bar" />
       </div>
     </section>
